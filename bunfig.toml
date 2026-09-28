@@ -1,0 +1,3 @@
+[install]
+# Spec 0001: semua versi dependency dipin eksplisit.
+exact = true

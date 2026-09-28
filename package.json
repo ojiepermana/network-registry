@@ -1,0 +1,38 @@
+{
+  "name": "network-registry",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.2",
+  "engines": {
+    "bun": ">=1.4.2",
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev:backend": "bun run --watch apps/backend/src/index.ts",
+    "dev:frontend": "cd apps/frontend && ng serve",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p apps/frontend/tsconfig.app.json --noEmit && tsc -p apps/frontend/tsconfig.spec.json --noEmit",
+    "test:frontend": "cd apps/frontend && ng test --watch=false",
+    "build:backend": "bun build apps/backend/src/index.ts --target=bun --outdir=dist/backend --minify --sourcemap=linked",
+    "build:frontend": "cd apps/frontend && ng build"
+  },
+  "dependencies": {
+    "@angular/common": "22.2.0",
+    "@angular/compiler": "22.2.0",
+    "@angular/core": "22.2.0",
+    "@angular/forms": "22.2.0",
+    "@angular/platform-browser": "22.2.0",
+    "@angular/router": "22.2.0",
+    "elysia": "1.4.30",
+    "rxjs": "7.8.2",
+    "tslib": "2.8.1"
+  },
+  "devDependencies": {
+    "@angular/build": "22.2.0",
+    "@angular/cli": "22.2.0",
+    "@angular/compiler-cli": "22.2.0",
+    "@types/bun": "1.4.2",
+    "jsdom": "30.1.1",
+    "typescript": "6.0.3",
+    "vitest": "5.0.2"
+  }
+}

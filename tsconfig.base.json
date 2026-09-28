@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2024",
+    "lib": ["ES2024"],
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "types": ["bun"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@nr/platform": ["./packages/platform/src/index.ts"],
+      "@nr/platform/*": ["./packages/platform/src/*"],
+      "@nr/db": ["./packages/db/src/index.ts"],
+      "@nr/db/*": ["./packages/db/src/*"],
+      "@nr/registry-core": ["./packages/registry-core/src/index.ts"],
+      "@nr/registry-core/*": ["./packages/registry-core/src/*"],
+      "@nr/contracts": ["./packages/contracts/src/index.ts"],
+      "@nr/contracts/*": ["./packages/contracts/src/*"]
+    }
+  }
+}
