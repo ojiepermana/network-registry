@@ -1,0 +1,13 @@
+{
+  "tool": "bun:test",
+  "gate": null,
+  "additionalTools": ["vitest via Angular CLI unit-test builder (apps/frontend)"],
+  "e2eTool": "playwright",
+  "testDir": "beside the source; tests/integration for cross module tests with PostgreSQL 18; tests/e2e for Playwright",
+  "filePattern": "*.test.ts (backend, packages, scripts), *.spec.ts (apps/frontend/src)",
+  "packageManager": "bun",
+  "runCommands": {
+    "bun": "bun test --path-ignore-patterns='apps/frontend/**'",
+    "frontend": "bun run test:frontend"
+  }
+}
